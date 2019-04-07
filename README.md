@@ -26,12 +26,12 @@ The tweet is posted as it is.
 
 The execution done based on the flag value:
 
-	a. If flag is True
+2.a. If flag is True
 ```
 	The inappropriate words are replaced as xxx.
 ```
 
-	b. If flag is False
+2.b. If flag is False
 ```
 	The tweet is not posted
 ```
