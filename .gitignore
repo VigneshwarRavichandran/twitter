@@ -1,5 +1,5 @@
 
-secure.txt
+secure.py
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
