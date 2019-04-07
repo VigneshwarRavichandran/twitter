@@ -1,9 +1,10 @@
 
 import tweepy
 from security import Secure
+from config import Validate
 
 
-def OAuth():
+def auth():
 	try:
 		tweet = Secure()
 		auth = tweepy.OAuthHandler(tweet.get_consumer_key(), tweet.get_consumer_secret())
@@ -12,6 +13,13 @@ def OAuth():
 	except Exception as e:
 		return None
 
-oauth = OAuth()
+oauth = auth()
 api = tweepy.API(oauth)
-api.update_status('Hello Tis is Vigneshwar Ravichandran')
+msg = "hello Tis is Vigneshwar Ravichandran hai"
+validate = Validate() 
+result = validate.check(msg)
+if(result):
+	api.update_status(result)
+else:
+	print("Use appropriate words")
+	
